@@ -1,14 +1,16 @@
 {
-	"name": "federation-demo-container",
+	"name": "federation-demo-navbar",
 	"version": "1.0.0",
-	"description": "Orchestrator/container application for module federation example",
+	"description": "Navbar component for the module federation example",
 	"main": "index.js",
 	"author": "Brian Bolnick",
 	"license": "MIT",
 	"private": false,
 	"dependencies": {
+		"@babel/cli": "^7.13.14",
 		"react": "^17.0.2",
-		"react-dom": "^17.0.2"
+		"react-dom": "^17.0.2",
+		"react-router-dom": "^5.2.0"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.13.15",
@@ -31,8 +33,10 @@
 		"webpack-dev-server": "^3.11.2"
 	},
 	"scripts": {
-		"start": "webpack serve --port 3000",
-		"build": "webpack"
+		"start": "webpack serve --port 3001",
+		"build": "webpack",
+    "serve": "serve dist -p 3001"
+
 	},
 	"eslintConfig": {
 		"extends": "react-app"
