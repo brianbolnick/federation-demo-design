@@ -1,4 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
 const { ModuleFederationPlugin } = require('webpack').container;
 
 const htmlPlugin = new HtmlWebPackPlugin({
@@ -8,6 +9,13 @@ const htmlPlugin = new HtmlWebPackPlugin({
 
 module.exports = {
   mode: 'development',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 3001
+  },
+  output: {
+    publicPath: 'http://localhost:3001/'
+  },
   module: {
     rules: [
       {
