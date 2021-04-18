@@ -33,11 +33,15 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: 'federation_demo_navbar',
-      library: { type: 'var', name: 'federation_demo_navbar' },
+      name: 'federation_demo_design',
+      library: { type: 'var', name: 'federation_demo_design' },
       filename: 'remoteEntry.js',
+      remotes: {
+        federation_demo_about: 'federation_demo_about',
+        federation_demo_container: 'federation_demo_container'
+      },
       exposes: {
-        './Navbar': './src/Navbar'
+        './Button': './src/Button'
       },
       shared: ['react', 'react-dom']
     }),

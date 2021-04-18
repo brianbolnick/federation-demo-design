@@ -1,7 +1,5 @@
 import React from 'react';
 
-const App = () => {
-  return <h1>Navbar App</h1>;
-};
+const App = () => <div>Home of the design system</div>;
 
 export default App;
