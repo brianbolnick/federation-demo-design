@@ -36,10 +36,6 @@ module.exports = {
       name: 'federation_demo_design',
       library: { type: 'var', name: 'federation_demo_design' },
       filename: 'remoteEntry.js',
-      remotes: {
-        federation_demo_about: 'federation_demo_about',
-        federation_demo_container: 'federation_demo_container'
-      },
       exposes: {
         './Button': './src/Button'
       },
